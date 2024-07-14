@@ -15,7 +15,7 @@ Tesh Empire aims to be a valuable resource for individuals and organizations see
 
 ## Getting Started
 
-1. **Visit the Website**: Go to [https://yourusername.github.io/repository-name](https://yourusername.github.io/repository-name) to explore the content.
+1. **Visit the Website**: Go to [https://Samtedh.github.io/Tesh-empire-website](https://Samtedh.github.io/Tesh-empire-website) to explore the content.
 2. **Explore the Sections**: Navigate through different sections to find information and resources relevant to your interests.
 3. **Stay Updated**: Check back regularly for updates and new content.
 
@@ -25,7 +25,7 @@ If you would like to contribute to Tesh Empire, feel free to submit pull request
 
 ## Contact
 
-For any questions or inquiries, please reach out to [your-email@example.com](mailto:your-email@example.com).
+For any questions or inquiries, please reach out to [sammymutethia@gmail.com](mailto:sammymutethia@gmail.com).
 
 ## License
 
