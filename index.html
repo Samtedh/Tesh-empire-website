@@ -8,67 +8,97 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Tesh Empire</h1>
+        <h1>Tesh Empire</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#news">News</a></li>
+                <li><a href="#tutorials">Tutorials</a></li>
+                <li><a href="#threat-intelligence">Threat Intelligence</a></li>
+                <li><a href="#forums">Forums</a></li>
                 <li><a href="#resources">Resources</a></li>
-                <li><a href="#events">Events</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#quizzes">Quizzes</a></li>
+                <li><a href="#webinars">Webinars</a></li>
+                <li><a href="#incident-response">Incident Response</a></li>
+                <li><a href="#profiles">Profiles</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#social-media">Follow Us</a></li>
             </ul>
         </nav>
     </header>
-    <section id="home">
-        <h2>Home</h2>
-        <p>Welcome to the home of cyber security awareness.</p>
-    </section>
-    <section id="about">
-        <h2>About</h2>
-        <p>Learn more about Tesh Empire and our mission.</p>
-    </section>
-    <section id="news">
-        <h2>News</h2>
-        <div id="news-feed">Loading news...</div>
-    </section>
-    <section id="resources">
-        <h2>Resources</h2>
-        <ul>
-            <li><a href="#">Tool 1</a></li>
-            <li><a href="#">Tool 2</a></li>
-            <li><a href="#">Downloadable Resource</a></li>
-        </ul>
-    </section>
-    <section id="events">
-        <h2>Events</h2>
-        <p>Join our webinars and workshops.</p>
-        <div id="events-list">Loading events...</div>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-    <section id="faq">
-        <h2>FAQ</h2>
-        <div class="faq-item">
-            <h3>What is cyber security?</h3>
-            <p class="answer">Cyber security involves protecting computer systems and networks from digital attacks.</p>
-        </div>
-        <div class="faq-item">
-            <h3>How can I stay safe online?</h3>
-            <p class="answer">You can stay safe by using strong passwords, avoiding suspicious links, and keeping your software updated.</p>
-        </div>
-    </section>
+
+    <main>
+        <section id="tutorials">
+            <h2>Interactive Tutorials</h2>
+            <p>Step-by-step guides on various cyber security topics with interactive elements.</p>
+        </section>
+
+        <section id="threat-intelligence">
+            <h2>Threat Intelligence Feed</h2>
+            <p>Real-time updates on the latest threats, vulnerabilities, and cyber attacks.</p>
+        </section>
+
+        <section id="forums">
+            <h2>Discussion Forums</h2>
+            <p>A space where users can discuss cyber security topics, share insights, and ask questions.</p>
+        </section>
+
+        <section id="resources">
+            <h2>Tools and Resources</h2>
+            <p>A section with useful cyber security tools, software recommendations, and downloadable resources.</p>
+        </section>
+
+        <section id="news">
+            <h2>News and Articles</h2>
+            <p>Regularly updated news, articles, and blog posts on current cyber security trends and research.</p>
+        </section>
+
+        <section id="quizzes">
+            <h2>Quizzes and Challenges</h2>
+            <p>Interactive quizzes and challenges to test knowledge and skills in cyber security.</p>
+        </section>
+
+        <section id="webinars">
+            <h2>Webinars and Workshops</h2>
+            <p>Scheduled live sessions or recorded content for in-depth learning and expert talks.</p>
+        </section>
+
+        <section id="incident-response">
+            <h2>Incident Response Guide</h2>
+            <p>Step-by-step instructions on how to handle different types of cyber incidents.</p>
+        </section>
+
+        <section id="profiles">
+            <h2>User Profiles and Badges</h2>
+            <p>Profiles where users can track their progress, earn badges, and showcase their achievements.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact and Support</h2>
+            <p>A contact form or support system for users to get help or report issues.</p>
+        </section>
+
+        <section id="social-media">
+            <h2>Follow Us</h2>
+            <ul>
+                <li><a href="https://facebook.com/teshempire" target="_blank">Facebook</a></li>
+                <li><a href="https://tiktok.com/@teshmbeks" target="_blank">TikTok</a></li>
+                <li><a href="https://twitter.com/sammymutethia" target="_blank">Twitter</a></li>
+                <li><a href="https://linkedin.com/in/sammymutethia" target="_blank">LinkedIn</a></li>
+            </ul>
+        </section>
+
+        <section id="stories">
+            <h2>Latest Stories</h2>
+            <div id="story-container"></div>
+            <textarea id="new-story" placeholder="Write your story here..."></textarea>
+            <button onclick="postStory()">Post Story</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tesh Empire. All rights reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
