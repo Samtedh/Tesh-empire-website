@@ -28,6 +28,21 @@
     <section id="home">
         <h2>Welcome to Tesh Empire</h2>
         <p>Your one-stop platform for cyber security awareness, threats, and defenses.</p>
+        <p>**First Cyber Security Story:**</p>
+        <div class="card">
+            <h3>Title: Protecting Yourself from Phishing Attacks</h3>
+            <p>Phishing attacks are one of the most common types of cyber threats. These attacks typically involve an attacker sending a fraudulent message designed to trick a person into revealing sensitive information or deploying malicious software on the victim's infrastructure like ransomware.</p>
+            <p>To protect yourself from phishing attacks, follow these tips:</p>
+            <ul>
+                <li>Be wary of unsolicited emails and messages, especially those asking for personal information.</li>
+                <li>Check the sender's email address carefully to ensure it's legitimate.</li>
+                <li>Look for typos and grammatical errors in the message, which can be a sign of a phishing attempt.</li>
+                <li>Avoid clicking on links or downloading attachments from unknown or suspicious emails.</li>
+                <li>Use two-factor authentication to add an extra layer of security to your accounts.</li>
+                <li>Keep your software and security systems up to date to defend against known vulnerabilities.</li>
+            </ul>
+            <p>Stay vigilant and always verify the authenticity of communications before taking any action.</p>
+        </div>
     </section>
 
     <section id="tutorials">
@@ -74,7 +89,13 @@
         <h2>Contact and Support</h2>
         <p>Get in touch with us for support or to report issues.</p>
         <form>
-            <!-- Contact form fields here -->
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message"></textarea><br><br>
+            <button type="submit" class="button">Submit</button>
         </form>
     </section>
 

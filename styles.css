@@ -85,3 +85,23 @@ footer {
 .card:hover {
     transform: translateY(-10px);
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input, textarea {
+    margin: 5px 0;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
