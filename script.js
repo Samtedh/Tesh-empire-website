@@ -1,48 +1,64 @@
-import { getFirestore, collection, addDoc, getDocs, query, where } from "firebase/firestore";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-analytics.js";
+import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js";
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyADzp17XgOO9cwtC6pmOHJpBZLvyj3Ro-0",
+  authDomain: "tesh-empire-website.firebaseapp.com",
+  projectId: "tesh-empire-website",
+  storageBucket: "tesh-empire-website.appspot.com",
+  messagingSenderId: "172517224816",
+  appId: "1:172517224816:web:e7a6227546c181ad3ddfb5",
+  measurementId: "G-6M7L4BWHMC"
+};
 
 // Initialize Firebase
-const db = getFirestore();
-const auth = getAuth();
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const db = getFirestore(app);
 
-// Story Form Submission
-document.getElementById('storyForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const title = document.getElementById('title').value;
-    const content = document.getElementById('content').value;
+// Add functionality to the login button
+document.getElementById('login-btn').addEventListener('click', function() {
+    alert('Login functionality is not implemented yet.');
+});
+
+// Handle contact form submission
+document.getElementById('contact-form').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const message = event.target.message.value;
+
     try {
-        await addDoc(collection(db, 'stories'), { title, content });
-        alert('Story posted successfully!');
-        document.getElementById('storyForm').reset();
-        loadStories();
-    } catch (error) {
-        console.error('Error adding document: ', error);
+        await addDoc(collection(db, "contactMessages"), {
+            name: name,
+            email: email,
+            message: message,
+            timestamp: new Date()
+        });
+        alert("Your message has been sent!");
+        event.target.reset();
+    } catch (e) {
+        console.error("Error adding document: ", e);
+        alert("Error sending message. Please try again later.");
     }
 });
 
-// Load Stories
-const loadStories = async () => {
-    const querySnapshot = await getDocs(collection(db, 'stories'));
-    const storiesDiv = document.getElementById('stories');
-    storiesDiv.innerHTML = '';
-    querySnapshot.forEach((doc) => {
-        const story = doc.data();
-        storiesDiv.innerHTML += `<article><h3>${story.title}</h3><p>${story.content}</p></article>`;
+// Search functionality
+document.getElementById('search-btn').addEventListener('click', async function() {
+    const searchQuery = document.getElementById('search-input').value.toLowerCase();
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        section.style.display = 'none';
     });
-};
 
-// Search Functionality
-document.getElementById('searchInput').addEventListener('input', async (e) => {
-    const searchTerm = e.target.value.toLowerCase();
-    const q = query(collection(db, 'stories'), where('title', '>=', searchTerm));
-    const querySnapshot = await getDocs(q);
-    const searchResultsDiv = document.getElementById('searchResults');
-    searchResultsDiv.innerHTML = '';
-    querySnapshot.forEach((doc) => {
-        const story = doc.data();
-        searchResultsDiv.innerHTML += `<article><h3>${story.title}</h3><p>${story.content}</p></article>`;
+    const results = await getDocs(collection(db, "articles"));
+    results.forEach(doc => {
+        const article = doc.data();
+        if (article.title.toLowerCase().includes(searchQuery) || article.content.toLowerCase().includes(searchQuery)) {
+            document.getElementById(article.section).style.display = 'block';
+        }
     });
 });
-
-// Load stories on page load
-window.addEventListener('load', loadStories);

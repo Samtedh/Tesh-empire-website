@@ -5,72 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tesh Empire</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="module" src="firebaseConfig.js"></script>
-    <script type="module" src="script.js"></script>
 </head>
 <body>
     <header>
-        <h1>Welcome to Tesh Empire</h1>
+        <h1>Tesh Empire</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#tutorials">Tutorials</a></li>
+                <li><a href="#threats">Threats</a></li>
+                <li><a href="#forums">Forums</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#quizzes">Quizzes</a></li>
+                <li><a href="#webinars">Webinars</a></li>
+                <li><a href="#incident-response">Incident Response</a></li>
+                <li><a href="#profile">Profile</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#cms">CMS</a></li>
-                <li><a href="#search">Search</a></li>
             </ul>
         </nav>
+        <div class="login">
+            <button id="login-btn">Login</button>
+        </div>
     </header>
-    <main>
-        <section id="home">
-            <h2>Latest Cyber Security News</h2>
-            <article>
-                <h3>Cybersecurity in 2024: Emerging Threats and Solutions</h3>
-                <p>As we move further into 2024, the landscape of cybersecurity continues to evolve with new threats and advanced solutions...</p>
-            </article>
-        </section>
-        <section id="about">
-            <h2>About Tesh Empire</h2>
-            <p>Welcome to Tesh Empire, your go-to resource for the latest in cybersecurity news, trends, and education. Our mission is to create awareness and provide valuable insights into the world of cyber security...</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form id="contactForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </section>
-        <section id="cms">
-            <h2>Content Management System</h2>
-            <p>Add your new stories here.</p>
-            <form id="storyForm">
-                <label for="title">Title:</label>
-                <input type="text" id="title" name="title" required>
-                <label for="content">Content:</label>
-                <textarea id="content" name="content" required></textarea>
-                <button type="submit">Post Story</button>
-            </form>
-            <div id="stories"></div>
-        </section>
-        <section id="search">
-            <h2>Search Stories</h2>
-            <input type="text" id="searchInput" placeholder="Search...">
-            <div id="searchResults"></div>
-        </section>
-    </main>
+
+    <section id="tutorials">
+        <h2>Interactive Tutorials</h2>
+        <p>Step-by-step guides on various cyber security topics with interactive elements.</p>
+    </section>
+
+    <section id="threats">
+        <h2>Threat Intelligence Feed</h2>
+        <p>Real-time updates on the latest threats, vulnerabilities, and cyber attacks.</p>
+    </section>
+
+    <section id="forums">
+        <h2>Discussion Forums</h2>
+        <p>A space where users can discuss cyber security topics, share insights, and ask questions.</p>
+    </section>
+
+    <section id="tools">
+        <h2>Tools and Resources</h2>
+        <p>Useful cyber security tools, software recommendations, and downloadable resources.</p>
+    </section>
+
+    <section id="news">
+        <h2>News and Articles</h2>
+        <p>Regularly updated news, articles, and blog posts on current cyber security trends and research.</p>
+    </section>
+
+    <section id="quizzes">
+        <h2>Quizzes and Challenges</h2>
+        <p>Interactive quizzes and challenges to test knowledge and skills in cyber security.</p>
+    </section>
+
+    <section id="webinars">
+        <h2>Webinars and Workshops</h2>
+        <p>Scheduled live sessions or recorded content for in-depth learning and expert talks.</p>
+    </section>
+
+    <section id="incident-response">
+        <h2>Incident Response Guide</h2>
+        <p>Step-by-step instructions on how to handle different types of cyber incidents.</p>
+    </section>
+
+    <section id="profile">
+        <h2>User Profiles and Badges</h2>
+        <p>Profiles where users can track their progress, earn badges, and showcase their achievements.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact and Support</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
     <footer>
-        <p>Connect with us on social media:</p>
-        <ul>
-            <li><a href="https://www.facebook.com/teshempire">Facebook</a></li>
-            <li><a href="https://www.tiktok.com/@teshmbeks">TikTok</a></li>
-            <li><a href="https://twitter.com/SammyMutethia">Twitter</a></li>
-            <li><a href="https://www.linkedin.com/in/sammymutethia">LinkedIn</a></li>
-        </ul>
+        <div class="social-media">
+            <a href="https://www.facebook.com/teshempire" target="_blank">Facebook</a>
+            <a href="https://www.tiktok.com/@teshmbeks" target="_blank">TikTok</a>
+            <a href="https://twitter.com/Sammy_mutethia" target="_blank">Twitter</a>
+            <a href="https://www.linkedin.com/in/sammymutethia" target="_blank">LinkedIn</a>
+        </div>
+        <p>&copy; 2024 Tesh Empire. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,16 +1,21 @@
-/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e0f7fa;
+    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #00796b;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
 }
 
 nav ul {
@@ -24,44 +29,75 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
 }
 
-main {
+.login {
+    margin-left: auto;
+}
+
+section {
     padding: 20px;
 }
 
 footer {
-    background-color: #00796b;
-    color: white;
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 10px;
+}
+
+footer .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    margin-top: 10px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #555;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     nav ul li {
-        display: block;
-        margin: 10px 0;
+        margin-bottom: 10px;
+    }
+
+    .login {
+        margin-top: 10px;
     }
 }
-
-/* CMS Form and Stories */
-#storyForm, #stories {
-    margin-top: 20px;
-}
-
-#searchInput {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-}
-
-#searchResults {
-    margin-top: 20px;
-}
-
