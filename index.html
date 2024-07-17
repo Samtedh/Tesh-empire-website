@@ -5,102 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tesh Empire</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-    <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics-compat.js"></script>
-    <script>
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyADzp17XgOO9cwtC6pmOHJpBZLvyj3Ro-0",
-            authDomain: "tesh-empire-website.firebaseapp.com",
-            projectId: "tesh-empire-website",
-            storageBucket: "tesh-empire-website.appspot.com",
-            messagingSenderId: "172517224816",
-            appId: "1:172517224816:web:e7a6227546c181ad3ddfb5",
-            measurementId: "G-6M7L4BWHMC"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-    </script>
+    <script type="module" src="firebaseConfig.js"></script>
+    <script type="module" src="script.js"></script>
 </head>
 <body>
     <header>
-        <h1>Tesh Empire</h1>
+        <h1>Welcome to Tesh Empire</h1>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#tutorials">Tutorials</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#tools">Tools</a></li>
-                <li><a href="#forums">Forums</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="home">
-            <h2>Welcome to Tesh Empire</h2>
-            <p>Your go-to source for cyber security awareness, threats, and defense strategies.</p>
+            <h2>Latest Cyber Security News</h2>
+            <article>
+                <h3>Cybersecurity in 2024: Emerging Threats and Solutions</h3>
+                <p>As we move further into 2024, the landscape of cybersecurity continues to evolve with new threats and advanced solutions...</p>
+            </article>
         </section>
-        <!-- User Authentication Section -->
-        <section id="auth">
-            <h2>User Authentication</h2>
-            <div id="user-container">
-                <div id="login-container">
-                    <h3>Login</h3>
-                    <form id="login-form">
-                        <input type="email" id="login-email" placeholder="Email" required>
-                        <input type="password" id="login-password" placeholder="Password" required>
-                        <button type="submit">Login</button>
-                    </form>
-                </div>
-                <div id="register-container">
-                    <h3>Register</h3>
-                    <form id="register-form">
-                        <input type="email" id="register-email" placeholder="Email" required>
-                        <input type="password" id="register-password" placeholder="Password" required>
-                        <button type="submit">Register</button>
-                    </form>
-                </div>
-                <div id="user-info" style="display: none;">
-                    <p id="user-email"></p>
-                    <button id="logout-button">Logout</button>
-                </div>
-            </div>
-        </section>
-        <section id="tutorials">
-            <h2>Interactive Tutorials</h2>
-            <p>Step-by-step guides on various cyber security topics with interactive elements.</p>
-        </section>
-        <section id="news">
-            <h2>Threat Intelligence Feed</h2>
-            <p>Real-time updates on the latest threats, vulnerabilities, and cyber attacks.</p>
-        </section>
-        <section id="tools">
-            <h2>Tools and Resources</h2>
-            <p>Useful cyber security tools, software recommendations, and downloadable resources.</p>
-        </section>
-        <section id="forums">
-            <h2>Discussion Forums</h2>
-            <p>A space where users can discuss cyber security topics, share insights, and ask questions.</p>
+        <section id="about">
+            <h2>About Tesh Empire</h2>
+            <p>Welcome to Tesh Empire, your go-to resource for the latest in cybersecurity news, trends, and education. Our mission is to create awareness and provide valuable insights into the world of cyber security...</p>
         </section>
         <section id="contact">
-            <h2>Contact and Support</h2>
-            <p>A contact form or support system for users to get help or report issues.</p>
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+        <section id="cms">
+            <h2>Content Management System</h2>
+            <p>Add your new stories here.</p>
+            <form id="storyForm">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="content">Content:</label>
+                <textarea id="content" name="content" required></textarea>
+                <button type="submit">Post Story</button>
+            </form>
+            <div id="stories"></div>
         </section>
     </main>
     <footer>
-        <p>© 2024 Tesh Empire. All rights reserved.</p>
-        <div class="social-media">
-            <a href="https://facebook.com/teshempire">Facebook</a>
-            <a href="https://tiktok.com/@teshmbeks">TikTok</a>
-            <a href="https://twitter.com/sammymutethia">Twitter</a>
-            <a href="https://linkedin.com/in/sammymutethia">LinkedIn</a>
-        </div>
+        <p>Connect with us on social media:</p>
+        <ul>
+            <li><a href="https://www.facebook.com/teshempire">Facebook</a></li>
+            <li><a href="https://www.tiktok.com/@teshmbeks">TikTok</a></li>
+            <li><a href="https://twitter.com/SammyMutethia">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/sammymutethia">LinkedIn</a></li>
+        </ul>
     </footer>
 </body>
 </html>
-
