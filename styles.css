@@ -14,7 +14,7 @@ header {
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
@@ -32,32 +32,36 @@ main {
     padding: 20px;
 }
 
-section {
-    margin-bottom: 20px;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 footer {
-    background-color: #004d40;
+    background-color: #00796b;
     color: white;
     text-align: center;
     padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
-footer ul {
-    list-style-type: none;
-    padding: 0;
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
 }
 
-footer ul li {
-    display: inline;
-    margin-right: 10px;
+/* CMS Form and Stories */
+#storyForm, #stories {
+    margin-top: 20px;
 }
 
-footer ul li a {
-    color: white;
-    text-decoration: none;
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
 }
+
+#searchResults {
+    margin-top: 20px;
+}
+
