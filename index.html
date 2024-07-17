@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tesh Empire</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics-compat.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyADzp17XgOO9cwtC6pmOHJpBZLvyj3Ro-0",
+            authDomain: "tesh-empire-website.firebaseapp.com",
+            projectId: "tesh-empire-website",
+            storageBucket: "tesh-empire-website.appspot.com",
+            messagingSenderId: "172517224816",
+            appId: "1:172517224816:web:e7a6227546c181ad3ddfb5",
+            measurementId: "G-6M7L4BWHMC"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
 </head>
 <body>
     <header>
@@ -13,100 +33,74 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#tutorials">Tutorials</a></li>
-                <li><a href="#threats">Threat Feed</a></li>
-                <li><a href="#forums">Forums</a></li>
-                <li><a href="#tools">Tools</a></li>
                 <li><a href="#news">News</a></li>
-                <li><a href="#quizzes">Quizzes</a></li>
-                <li><a href="#webinars">Webinars</a></li>
-                <li><a href="#response">Incident Response</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#forums">Forums</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-
-    <section id="home">
-        <h2>Welcome to Tesh Empire</h2>
-        <p>Your one-stop platform for cyber security awareness, threats, and defenses.</p>
-        <p>**First Cyber Security Story:**</p>
-        <div class="card">
-            <h3>Title: Protecting Yourself from Phishing Attacks</h3>
-            <p>Phishing attacks are one of the most common types of cyber threats. These attacks typically involve an attacker sending a fraudulent message designed to trick a person into revealing sensitive information or deploying malicious software on the victim's infrastructure like ransomware.</p>
-            <p>To protect yourself from phishing attacks, follow these tips:</p>
-            <ul>
-                <li>Be wary of unsolicited emails and messages, especially those asking for personal information.</li>
-                <li>Check the sender's email address carefully to ensure it's legitimate.</li>
-                <li>Look for typos and grammatical errors in the message, which can be a sign of a phishing attempt.</li>
-                <li>Avoid clicking on links or downloading attachments from unknown or suspicious emails.</li>
-                <li>Use two-factor authentication to add an extra layer of security to your accounts.</li>
-                <li>Keep your software and security systems up to date to defend against known vulnerabilities.</li>
-            </ul>
-            <p>Stay vigilant and always verify the authenticity of communications before taking any action.</p>
-        </div>
-    </section>
-
-    <section id="tutorials">
-        <h2>Interactive Tutorials</h2>
-        <p>Step-by-step guides on various cyber security topics with interactive elements.</p>
-    </section>
-
-    <section id="threats">
-        <h2>Threat Intelligence Feed</h2>
-        <p>Real-time updates on the latest threats, vulnerabilities, and cyber attacks.</p>
-    </section>
-
-    <section id="forums">
-        <h2>Discussion Forums</h2>
-        <p>A space to discuss cyber security topics, share insights, and ask questions.</p>
-    </section>
-
-    <section id="tools">
-        <h2>Tools and Resources</h2>
-        <p>A section with useful cyber security tools, software recommendations, and downloadable resources.</p>
-    </section>
-
-    <section id="news">
-        <h2>News and Articles</h2>
-        <p>Regularly updated news, articles, and blog posts on current cyber security trends and research.</p>
-    </section>
-
-    <section id="quizzes">
-        <h2>Quizzes and Challenges</h2>
-        <p>Interactive quizzes and challenges to test your knowledge and skills in cyber security.</p>
-    </section>
-
-    <section id="webinars">
-        <h2>Webinars and Workshops</h2>
-        <p>Scheduled live sessions or recorded content for in-depth learning and expert talks.</p>
-    </section>
-
-    <section id="response">
-        <h2>Incident Response Guide</h2>
-        <p>Step-by-step instructions on how to handle different types of cyber incidents.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact and Support</h2>
-        <p>Get in touch with us for support or to report issues.</p>
-        <form>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"><br><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message"></textarea><br><br>
-            <button type="submit" class="button">Submit</button>
-        </form>
-    </section>
-
+    <main>
+        <section id="home">
+            <h2>Welcome to Tesh Empire</h2>
+            <p>Your go-to source for cyber security awareness, threats, and defense strategies.</p>
+        </section>
+        <!-- User Authentication Section -->
+        <section id="auth">
+            <h2>User Authentication</h2>
+            <div id="user-container">
+                <div id="login-container">
+                    <h3>Login</h3>
+                    <form id="login-form">
+                        <input type="email" id="login-email" placeholder="Email" required>
+                        <input type="password" id="login-password" placeholder="Password" required>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+                <div id="register-container">
+                    <h3>Register</h3>
+                    <form id="register-form">
+                        <input type="email" id="register-email" placeholder="Email" required>
+                        <input type="password" id="register-password" placeholder="Password" required>
+                        <button type="submit">Register</button>
+                    </form>
+                </div>
+                <div id="user-info" style="display: none;">
+                    <p id="user-email"></p>
+                    <button id="logout-button">Logout</button>
+                </div>
+            </div>
+        </section>
+        <section id="tutorials">
+            <h2>Interactive Tutorials</h2>
+            <p>Step-by-step guides on various cyber security topics with interactive elements.</p>
+        </section>
+        <section id="news">
+            <h2>Threat Intelligence Feed</h2>
+            <p>Real-time updates on the latest threats, vulnerabilities, and cyber attacks.</p>
+        </section>
+        <section id="tools">
+            <h2>Tools and Resources</h2>
+            <p>Useful cyber security tools, software recommendations, and downloadable resources.</p>
+        </section>
+        <section id="forums">
+            <h2>Discussion Forums</h2>
+            <p>A space where users can discuss cyber security topics, share insights, and ask questions.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact and Support</h2>
+            <p>A contact form or support system for users to get help or report issues.</p>
+        </section>
+    </main>
     <footer>
-        <p>Follow us on:</p>
-        <a href="https://www.facebook.com/teshempire" target="_blank">Facebook</a> |
-        <a href="https://www.tiktok.com/@teshmbeks" target="_blank">TikTok</a> |
-        <a href="https://twitter.com/sammymutethia" target="_blank">Twitter</a> |
-        <a href="https://www.linkedin.com/in/sammymutethia" target="_blank">LinkedIn</a>
+        <p>© 2024 Tesh Empire. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://facebook.com/teshempire">Facebook</a>
+            <a href="https://tiktok.com/@teshmbeks">TikTok</a>
+            <a href="https://twitter.com/sammymutethia">Twitter</a>
+            <a href="https://linkedin.com/in/sammymutethia">LinkedIn</a>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
+
