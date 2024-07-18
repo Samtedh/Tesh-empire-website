@@ -3,86 +3,81 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
 }
 
-/* Container */
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-/* Header */
 header {
     background-color: #333;
     color: white;
-    padding: 1em 0;
+    padding: 1em;
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-}
-
-header nav ul {
-    list-style: none;
+nav ul {
+    list-style-type: none;
     padding: 0;
 }
 
-header nav ul li {
+nav ul li {
     display: inline;
-    margin: 0 1em;
+    margin-right: 10px;
 }
 
-header nav ul li a {
+nav ul li a {
     color: white;
     text-decoration: none;
 }
 
-header .search {
-    margin-top: 1em;
-}
-
-header .search input {
-    padding: 0.5em;
+aside {
+    position: fixed;
     width: 200px;
-}
-
-header .search button {
-    padding: 0.5em;
-}
-
-/* Sections */
-section {
-    padding: 2em 0;
-    border-bottom: 1px solid #ccc;
-}
-
-section h2 {
-    text-align: center;
-    margin-bottom: 1em;
-}
-
-/* Footer */
-footer {
+    top: 0;
+    left: -200px;
+    height: 100%;
     background-color: #333;
     color: white;
-    text-align: center;
-    padding: 1em 0;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+aside #side-menu-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+aside #side-menu-content a:hover {
+    background-color: #575757;
+}
+
+aside button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 1em;
+}
+
+main {
+    margin: 2em;
+}
+
+section {
+    margin-bottom: 2em;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .container {
-        width: 95%;
+    nav ul {
+        display: none;
+    }
+    
+    aside {
+        left: 0;
     }
 
-    header nav ul li {
-        display: block;
-        margin: 0.5em 0;
-    }
-
-    header .search {
-        margin-top: 0.5em;
+    aside #side-menu-content {
+        padding-top: 60px;
     }
 }
