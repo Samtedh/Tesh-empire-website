@@ -3,97 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tesh Empire</title>
+    <title>Tesh Empire Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
-        <h1>Tesh Empire</h1>
-        <nav>
-            <ul>
-                <li><a href="#tutorials">Tutorials</a></li>
-                <li><a href="#threats">Threats</a></li>
-                <li><a href="#forums">Forums</a></li>
-                <li><a href="#tools">Tools</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#quizzes">Quizzes</a></li>
-                <li><a href="#webinars">Webinars</a></li>
-                <li><a href="#incident-response">Incident Response</a></li>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="login">
-            <button id="login-btn">Login</button>
+        <div class="container">
+            <h1>Tesh Empire Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#login">Login</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-btn">Search</button>
+            </div>
         </div>
     </header>
 
-    <section id="tutorials">
-        <h2>Interactive Tutorials</h2>
-        <p>Step-by-step guides on various cyber security topics with interactive elements.</p>
-    </section>
-
-    <section id="threats">
-        <h2>Threat Intelligence Feed</h2>
-        <p>Real-time updates on the latest threats, vulnerabilities, and cyber attacks.</p>
-    </section>
-
-    <section id="forums">
-        <h2>Discussion Forums</h2>
-        <p>A space where users can discuss cyber security topics, share insights, and ask questions.</p>
-    </section>
-
-    <section id="tools">
-        <h2>Tools and Resources</h2>
-        <p>Useful cyber security tools, software recommendations, and downloadable resources.</p>
-    </section>
-
-    <section id="news">
-        <h2>News and Articles</h2>
-        <p>Regularly updated news, articles, and blog posts on current cyber security trends and research.</p>
-    </section>
-
-    <section id="quizzes">
-        <h2>Quizzes and Challenges</h2>
-        <p>Interactive quizzes and challenges to test knowledge and skills in cyber security.</p>
-    </section>
-
-    <section id="webinars">
-        <h2>Webinars and Workshops</h2>
-        <p>Scheduled live sessions or recorded content for in-depth learning and expert talks.</p>
-    </section>
-
-    <section id="incident-response">
-        <h2>Incident Response Guide</h2>
-        <p>Step-by-step instructions on how to handle different types of cyber incidents.</p>
-    </section>
-
-    <section id="profile">
-        <h2>User Profiles and Badges</h2>
-        <p>Profiles where users can track their progress, earn badges, and showcase their achievements.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact and Support</h2>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-
-    <footer>
-        <div class="social-media">
-            <a href="https://www.facebook.com/teshempire" target="_blank">Facebook</a>
-            <a href="https://www.tiktok.com/@teshmbeks" target="_blank">TikTok</a>
-            <a href="https://twitter.com/Sammy_mutethia" target="_blank">Twitter</a>
-            <a href="https://www.linkedin.com/in/sammymutethia" target="_blank">LinkedIn</a>
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <h2>Welcome to Tesh Empire Website</h2>
+            <p>Your go-to resource for cyber security awareness, threats, and defense strategies.</p>
         </div>
-        <p>&copy; 2024 Tesh Empire. All rights reserved.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are dedicated to providing the latest in cyber security news and information.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Interactive Tutorials</li>
+                <li>Threat Intelligence Feed</li>
+                <li>Discussion Forums</li>
+                <li>Tools and Resources</li>
+                <li>News and Articles</li>
+                <li>Quizzes and Challenges</li>
+                <li>Webinars and Workshops</li>
+                <li>Incident Response Guide</li>
+                <li>User Profiles and Badges</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news">
+        <div class="container">
+            <h2>Latest News</h2>
+            <div id="news-content">
+                <!-- News stories will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login">
+        <div class="container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="email-login">Email:</label>
+                <input type="email" id="email-login" name="email" required>
+                <label for="password-login">Password:</label>
+                <input type="password" id="password-login" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Tesh Empire. All rights reserved.</p>
+            <p>Follow us on:
+                <a href="https://www.facebook.com/tesh-empire" target="_blank">Facebook</a> |
+                <a href="https://www.tiktok.com/@tesh-mbeks" target="_blank">TikTok</a> |
+                <a href="https://www.twitter.com/SammyMutethia" target="_blank">Twitter</a> |
+                <a href="https://www.linkedin.com/in/sammymutethia" target="_blank">LinkedIn</a>
+            </p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
