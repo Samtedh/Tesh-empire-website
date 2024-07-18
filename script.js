@@ -19,6 +19,21 @@ firebase.auth().onAuthStateChanged(user => {
     }
 });
 
+// Function to handle user registration
+document.getElementById('registerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('registerEmail').value;
+    const password = document.getElementById('registerPassword').value;
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then(userCredential => {
+            // Registered
+            console.log('User registered:', userCredential.user);
+        })
+        .catch(error => {
+            console.error('Error registering:', error);
+        });
+});
+
 // Function to handle user login
 function login() {
     const email = document.getElementById('email').value;

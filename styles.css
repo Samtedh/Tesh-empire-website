@@ -13,6 +13,14 @@ header {
     text-align: center;
 }
 
+header .menu-toggle {
+    background-color: #333;
+    color: white;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -51,20 +59,19 @@ aside #side-menu-content a:hover {
     background-color: #575757;
 }
 
-aside button {
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 1em;
-}
-
 main {
     margin: 2em;
 }
 
 section {
     margin-bottom: 2em;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: white;
 }
 
 /* Responsive Design */
